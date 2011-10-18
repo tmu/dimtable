@@ -9,6 +9,7 @@ Demo instructions
     cd djangoexample
     mysql --user=root -p < create_db.sql
     python manage.py syncdb
+    python manage.py create_ex1_data
     python manage.py collectstatic
     python manage.py runserver
 
