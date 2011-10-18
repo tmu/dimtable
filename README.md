@@ -13,6 +13,10 @@ Requirements
 
 Demo instructions
 -----------------
+    
+    export PYTHONPATH=<path to the root of the project, i.e. the dir that contains README.md>
+    e.g.
+    export PYTHONPATH=~/dimtable
 
     cd djangoexample
     mysql --user=root -p < create_db.sql
