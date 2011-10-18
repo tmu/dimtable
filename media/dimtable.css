@@ -1,0 +1,60 @@
+table.dimtable { 
+    /* Using fixed layout for better rendering performance on large tables */
+    table-layout: fixed;
+    border-color: #ddd;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-collapse: collapse;
+} 
+
+.dimtable td, 
+.dimtable th {
+    border-color: #ddd;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    margin: 0;
+    padding: 4px;
+    background-color: #FFF;
+    
+    font-size: 8pt;
+}
+
+.dimtable td.edit {
+    padding: 0px;
+}
+
+.dimtable th {
+    font-weight: normal;
+}
+
+.dimtable td.error {
+    background-color: red;
+}
+
+.dimtable input {
+  width: auto;
+  height: auto;
+  padding: 1px;
+  margin-bottom: auto;
+  font-size: 8pt;
+
+  color: #808080;
+  border: 0px solid #ccc;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* TODO(teemu): Find a robust way around this hack.
+   Setting min-width for cells is the only way that I can use to prevent
+   table cols and rows expanding when input is switched in place of the cell 
+   contents. Unfortunately, it depends on the size of inputs and zoom etc.
+   and it should be adjust per table, depending on it's inputs */ 
+.dimtable td, .dimtable th {
+    min-width: 34px;
+}
+
+.dimtable td.summary, 
+.dimtable th.summary {
+    background-color: #E7E7E7;
+}
