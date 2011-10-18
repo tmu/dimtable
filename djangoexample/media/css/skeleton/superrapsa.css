@@ -1,0 +1,27 @@
+/* #Typography
+================================================== */
+h1, h2, h3, h4, h4, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1 { 
+    text-transform: uppercase;
+}
+
+.errorlist li {
+    background-color: red;
+}
+
+th, td {
+   padding: 1em;
+}
+
+th {
+  font-weight: bold;
+}
+thead th {
+  background-color: #f8f8f8;
+}
+
+tbody th {
+    text-align: left;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% if title %}{{ title }}{% endif %}{% endblock %}</title>
+
+	<!-- CSS
+  ================================================== -->
+  {% load static %} 
+  {% block basestyle %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/skeleton/base.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/skeleton/skeleton.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/skeleton/layout.css">
+  {% endblock %}
+
+  {% block style %}{% endblock %}
+</head>
+
+{% load i18n %}
+
+<body>
+
+<!-- Container -->
+<div class="container">
+  {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% block footer %}<div id="footer"></div>{% endblock %}
+</div>
+<!-- END Container -->
+
+{% block basescripts %}
+<script src="{{ STATIC_URL }}js/jquery/jquery-1.6.1.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery/jquery-ui-1.8.5.custom.min.js"></script>
+
+<script src="{{ STATIC_URL }}js/skeleton/tabs.js"></script>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>
